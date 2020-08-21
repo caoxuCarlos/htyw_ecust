@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from answers import views as answers_view
+from main_page import views as main_page_view
+from money_job import views as money_job_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('homepage/', include('main_page.urls')),
     path('answers/', answers_view.ResourceListView.as_view(), name='answers'),
+    path('contribute/', main_page_view.contribute, name='contribute'),
+    path('jobs/', money_job_view.JobListView.as_view(), name='jobs'),
+    path('job_submit/', money_job_view.submit_job, name='job_submit'),
 ]
 

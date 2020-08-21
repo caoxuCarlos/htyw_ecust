@@ -1,0 +1,29 @@
+{% extends 'main_page/base.html'%}
+{% block content %}
+{% load crispy_forms_tags %}
+<h2>Contribute Page</h2>
+<form method="POST">
+    {% csrf_token %}
+    <fildset class="form-group">
+        <legend class="border-bottom mb-4">This is legend</legend>
+        {# form | crispy #}
+
+        <div class="fieldWrapper">
+            {{ form.topic.errors}}
+            <label>Topic</label>
+            {{ form.topic}}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.introduce.errors}}
+            <label>Introduce</label>
+            {{ form.introduce}}
+        </div>
+
+
+
+    </fildset>
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">SUBMIT BUTTON</button>
+    </div>
+</form>
+{% endblock content %}

@@ -1,4 +1,4 @@
-#!/media/carloscao/gitrepos/htyw/venv/bin/python
+#!/media/carloscao/gitrepos/htyw_ecust/venv/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

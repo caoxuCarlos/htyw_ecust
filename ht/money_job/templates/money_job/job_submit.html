@@ -1,0 +1,16 @@
+</html>
+{% extends 'main_page/base.html'%}
+{% block content %}
+{% load crispy_forms_tags %}
+<p>Job Submit Page</p>
+<form method="POST">
+    {% csrf_token %}
+    <fildset class="form-group">
+        <legend class="border-bottom mb-4">Submit Job</legend>
+        {{ form | crispy }}
+    </fildset>
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">SUBMIT JOB</button>
+    </div>
+</form>
+{% endblock content %}
