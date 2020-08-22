@@ -1,13 +1,29 @@
 {% extends 'main_page/base.html'%}
 {% block content %}
+
     {% for post in posts %}
         <article class="media content-section">
             <div class="media-body">
+
                 <div class="article-metadata">
-                    <h3 class="mr-2">{{ post.topic }}</h3>
+                    <h3 class="article-title">科目: {{ post.topic }}</h3>
                     <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
                 </div>
-                <p class="article-content">{{ post.introduce }}</p>
+
+                <div class="row">
+                    <div class="col-10 text-warp">
+                        <h6 class="text-break">简介: {{ post.introduce }}</h6>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="col-10 text-warp">
+                        <h6 class="text-break">地址: {{ post.location }}</h6>
+                    </div>
+                </div>
+
             </div>
         </article>
     {% endfor %}

@@ -8,4 +8,4 @@ class ResourceListView(ListView):
     template_name = 'answers/answer_page.html'
     context_object_name = 'resources'
     ordering = ['-date_posted']
-    paginate_by = 50
+    paginate_by = 10

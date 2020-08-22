@@ -4,11 +4,22 @@
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <p class="mr-2">{{ resource.title }}</p>
+            <h3 class="mr-2">{{ resource.title }}</h3>
             <small class="text-muted">{{ resource.date_posted|date:"F d, Y" }}</small>
         </div>
-        <h2 class="article-title">{{ resource.introduce }}</h2>
-        <p class="article-content">{{ resource.location }}</p>
+        <br>
+        <div class="row">
+            <div class="col-10 text-warp">
+                <h6 class="text-break">{{ resource.introduce }}</h6>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+        <div class="row">
+            <div class="col-10 text-warp">
+                <h6 class="text-break">{{ resource.location}}</h6>
+            </div>
+        </div>
     </div>
 </article>
 {% endfor %}

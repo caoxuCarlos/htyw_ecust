@@ -5,13 +5,43 @@
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <p class="mr-2">{{ job.subject }}</p>
-            <small class="text-muted">{{ job.post_date|date:"F d, Y" }}</small>
+            <h3 class="article-title">任务科目: {{ job.subject }}</h3>
+            <small class="text-muted">发布时间: {{ job.post_date|date:"F d, Y" }}</small>
         </div>
-        <h2 class="article-title">{{ job.how_much }}</h2>
-        <p class="article-content">{{ job.job_detail}}</p>
-        <p class="article-content">{{ job.deadline}}</p>
-        <p class="article-content">{{ job.contact }}</p>
+
+        <br>
+        <h6 class="article-title">任务细节:</h6>
+        <div class="row">
+            <div class="col-10 text-warp">
+                <p class="text-break">{{ job.job_detail}}</p>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="col-10 text-warp">
+                <h6 class="text-break">悬赏金额: {{ job.how_much}}</h6>
+            </div>
+        </div>
+
+        <div class="separator">
+        </div>
+
+        <div class="row">
+            <div class="col-10 text-warp">
+                <h6 class="text-break">截止日期: {{ job.deadline}}</h6>
+            </div>
+        </div>
+
+        <div class="separator">
+        </div>
+
+        <div class="row">
+            <div class="col-10 text-warp">
+                <h6 class="text-break">联系方式: {{ job.contact}}</h6>
+            </div>
+        </div>
     </div>
 </article>
 {% endfor %}

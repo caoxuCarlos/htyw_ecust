@@ -1,16 +1,30 @@
-</html>
 {% extends 'main_page/base.html'%}
 {% block content %}
 {% load crispy_forms_tags %}
-<p>Job Submit Page</p>
-<form method="POST">
-    {% csrf_token %}
-    <fildset class="form-group">
-        <legend class="border-bottom mb-4">Submit Job</legend>
-        {{ form | crispy }}
-    </fildset>
-    <div class="form-group">
-        <button class="btn btn-outline-info" type="submit">SUBMIT JOB</button>
-    </div>
-</form>
+<p>任务发布后将在"赏金任务"中显示</p>
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="content-section">
+    <form method="post">
+        {% csrf_token %}
+        <fildset class="form-group">
+            <legend class="border-bottom mb-4">发布赏金任务, 请个人帮忙干活吧~</legend>
+            {{ form|crispy }}
+        </fildset>
+
+        <br>
+        <div class="form-group">
+            <button class="btn btn-outline-dark" type="submit">发布任务</button>
+        </div>
+    </form>
+</div>
+
+
 {% endblock content %}

@@ -1,29 +1,30 @@
 {% extends 'main_page/base.html'%}
 {% block content %}
 {% load crispy_forms_tags %}
-<h2>Contribute Page</h2>
-<form method="POST">
-    {% csrf_token %}
-    <fildset class="form-group">
-        <legend class="border-bottom mb-4">This is legend</legend>
-        {# form | crispy #}
+<p>资料提交后将在主页显示, 经过整理后将从主页移动至"答案&资料"</p>
+<p>各位客官也可以通过这个渠道留言哦</p>
 
-        <div class="fieldWrapper">
-            {{ form.topic.errors}}
-            <label>Topic</label>
-            {{ form.topic}}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="content-section">
+    <form method="post">
+        {% csrf_token %}
+        <fildset class="form-group">
+            <legend class="border-bottom mb-4">提交答案&资料</legend>
+            {{ form|crispy }}
+        </fildset>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-outline-dark" type="submit">发布</button>
         </div>
-        <div class="fieldWrapper">
-            {{ form.introduce.errors}}
-            <label>Introduce</label>
-            {{ form.introduce}}
-        </div>
+    </form>
+</div>
 
 
-
-    </fildset>
-    <div class="form-group">
-        <button class="btn btn-outline-info" type="submit">SUBMIT BUTTON</button>
-    </div>
-</form>
 {% endblock content %}

@@ -17,7 +17,7 @@ def contribute(request):
             #introduce = form.cleaned_data.get('introduce')
             #location = form.cleaned_data.get('location')
             # the below one is a "flashed message"
-            messages.success(request, f'Thank you for your contribution!')
+            messages.success(request, f'您辛苦了, 我已经用小本本记下来了~')
             return redirect('/homepage')  # the 1st para in redirect is the name we gave to our URL patten
     else:
         # just create a blank form

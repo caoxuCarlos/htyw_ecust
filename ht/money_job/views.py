@@ -19,7 +19,7 @@ def submit_job(request):
             #introduce = form.cleaned_data.get('introduce')
             #location = form.cleaned_data.get('location')
             # the below one is a "flashed message"
-            messages.success(request, f'Thank you for your contribution!')
+            messages.success(request, f'得嘞客官, 您的任务已经成功发布!')
             return redirect('/jobs')
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -32,4 +32,4 @@ class JobListView(ListView):
     template_name = 'money_job/job_page.html'
     context_object_name = 'jobs'
     ordering = ['-post_date']
-    paginate_by = 10
+    paginate_by = 5

@@ -12,7 +12,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lgj navbar-dark fixed-top" style="background-color: #363642;">
-    <a class="navbar-brand" href="{% url 'home' %}">互通有无站</a>
+    <a class="navbar-brand" href="{% url 'home' %}">ECUST机动学院互通有无站</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-md-auto">
             <li class="nav-item active mr-sm-0">
-                <a class="nav-link" href="#"> 嗯~ 感觉不错, 给站长赏颗糖吃! <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#"> 嗯~ 感觉不错, 给小二赏颗糖吃! <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active mr-sm-0">
-                <a class="nav-link" href="#"> 这个站长是新手, 我给他提点儿建议~ <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">这个站长是新手, 我给他提点儿建议~</a>
             </li>
         </ul>
     </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="col-md-4">
             <div class="content-section">
-                <h3> 阁下到来, 小站蓬荜生辉!</h3>
+                <h3> 客官到来, 小站蓬荜生辉!</h3>
                 <p class='text-muted'>各位客官, 用得满意还请您常来~
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-light">
@@ -54,10 +54,10 @@
                         <a href="{% url 'jobs' %}">赏金任务 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="list-group-item list-group-item-light">
-                        <a href="#">提供答案&资料 <span class="sr-only">(current)</span></a>
+                        <a href="{%url 'contribute'%}">提供答案&资料 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="list-group-item list-group-item-light">
-                        <a href="#"> 发布赏金任务 <span class="sr-only">(current)</span></a>
+                        <a href="{% url 'job_submit'%}"> 发布赏金任务 <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 </p>

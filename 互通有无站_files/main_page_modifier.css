@@ -49,7 +49,6 @@ a.article-title:hover {
   white-space: pre-line;
 }
 
-
 .article-img {
   height: 65px;
   width: 65px;
@@ -59,7 +58,7 @@ a.article-title:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 3px solid #3B465B
+  border-bottom: 1px solid #e3e3e3
 }
 
 .article-metadata a:hover {
@@ -85,12 +84,4 @@ a.article-title:hover {
 }
 
 
-.text-break{
-  word-break: break-word;
-}
 
-.separator{
-  padding-bottom: 1px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #E2E8F0
-}
