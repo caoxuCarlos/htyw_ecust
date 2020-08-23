@@ -8,6 +8,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>互通有无站</title>
     <link rel="stylesheet" href="{% static 'main_page/main_page_modifier.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'tip/icon.png' %}" />
 </head>
 <body>
 
@@ -21,10 +22,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-md-auto">
             <li class="nav-item active mr-sm-0">
-                <a class="nav-link" href="#"> 嗯~ 感觉不错, 给小二赏颗糖吃! <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{%url 'praise'%}"> 嗯~ 感觉不错, 给小二赏颗糖吃! <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">这个站长是新手, 我给他提点儿建议~</a>
+                <a class="nav-link" href="{%url 'criticize'%}">这个站长是新手, 我给他提点儿建议~</a>
             </li>
         </ul>
     </div>
@@ -40,7 +41,9 @@
                     </div>
                 {% endfor %}
             {% endif %}
-            {% block content %}{% endblock content %}
+
+            {% block content %}
+            {% endblock content %}
         </div>
         <div class="col-md-4">
             <div class="content-section">

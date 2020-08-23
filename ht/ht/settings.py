@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-with open('/etc/config.json') as config_file:
+with open('/etc/htyw_config.json') as config_file:
     config = json.load(config_file)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config['SECRET_KEY']
@@ -27,7 +27,12 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'www.yibeee.com',
+    '47.96.229.238',
+    '127.0.0.1'
+]
+
 
 # Application definition
 
@@ -42,6 +47,7 @@ INSTALLED_APPS = [
     'answers.apps.AnswersConfig',
     'crispy_forms',
     'money_job.apps.MoneyJobConfig',
+    'tip.apps.TipConfig',
 ]
 
 MIDDLEWARE = [
