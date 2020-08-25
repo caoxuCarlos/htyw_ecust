@@ -9,6 +9,7 @@ class Resource(models.Model):
     title = models.CharField(max_length=50)
     introduce = models.TextField()
     location = models.TextField()
+    key = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     def __str__(self):
         return self.title

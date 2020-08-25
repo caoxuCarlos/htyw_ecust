@@ -21,7 +21,9 @@ from money_job import views as money_job_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('homepage/', include('main_page.urls')),
+    # path('homepage/', include('main_page.urls')),
+    # hijack homepage url to answers page (prevent unauthorized bad information)
+    path('homepage/', answers_view.ResourceListView.as_view(), name='home'),
     path('tip/', include('tip.urls')),
     path('answers/', answers_view.ResourceListView.as_view(), name='answers'),
     path('contribute/', main_page_view.contribute, name='contribute'),
