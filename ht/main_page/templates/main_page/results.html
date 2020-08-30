@@ -1,0 +1,49 @@
+{% extends 'main_page/base.html'%}
+{% block content %}
+    {% for result in results %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <h3 class="mr-2">{{ result.title }}</h3>
+                <small class="text-muted">{{ result.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-10 text-warp">
+                    <h6 class="text-break">{{ result.introduce }}</h6>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+            <div class="row">
+                <div class="col-10 text-warp">
+                    <h6 class="text-break">链接: <a href="{{ result.location}}">{{ result.location}}</a>
+                        密码: <kbd>{{ result.key}}</kbd>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+
+    {% if page_obj.has_previous %}
+    <a class="btn btn-outline-dark mb-4" href="?page=1">First</a>
+    <a class="btn btn-outline-dark mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+    <a class="btn btn-dark mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+    <a class="btn btn-outline-dark mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a class="btn btn-outline-dark mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+    <a class="btn btn-outline-dark mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+
+<!--<a href="{% url 'home' %}" class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">返回主页继续搜索</a>-->
+
+{% endblock content %}
