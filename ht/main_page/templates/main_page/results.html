@@ -1,29 +1,36 @@
 {% extends 'main_page/base.html'%}
 {% block content %}
+{% load static %}
     {% for result in results %}
-    <article class="media content-section">
-        <div class="media-body">
-            <div class="article-metadata">
-                <h3 class="mr-2">{{ result.title }}</h3>
-                <small class="text-muted">{{ result.date_posted|date:"F d, Y" }}</small>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-10 text-warp">
-                    <h6 class="text-break">{{ result.introduce }}</h6>
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <h3 class="mr-2">{{ result.title }}</h3>
+                    <small class="text-muted">{{ result.date_posted|date:"F d, Y" }}</small>
                 </div>
-            </div>
+                <br>
+                <div class="row">
+                    <div class="col-10 text-warp">
+                        <h6 class="text-break">
+                            点击
+                            <a href="{{ result.introduce}}">
+                                <img src="{% static 'tip/download.png'%}" width="30" height="30" alt="" loading="lazy">
+                            </a>
+                            直接无限速下载到本地
+                        </h6>
+                    </div>
+                </div>
 
-            <div class="separator"></div>
-            <div class="row">
-                <div class="col-10 text-warp">
-                    <h6 class="text-break">下载链接: <a href="{{ result.location}}">{{ result.location}}</a>
-                        密码: <kbd>{{ result.key}}</kbd>
-                    </h6>
+                <div class="separator"></div>
+                <div class="row">
+                    <div class="col-10 text-warp">
+                        <h6 class="text-break">百度网盘: <a href="{{ result.location}}">{{ result.location}}</a>
+                            密码: <kbd>{{ result.key}}</kbd>
+                        </h6>
+                    </div>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
     {% endfor %}
 
     {% if page_obj.has_previous %}

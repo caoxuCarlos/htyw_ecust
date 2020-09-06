@@ -12,14 +12,20 @@
         <br>
         <div class="row">
             <div class="col-10 text-warp">
-                <h6 class="text-break">{{ resource.introduce }}</h6>
+                <h6 class="text-break">
+                    点击
+                    <a href="{{ resource.introduce}}">
+                        <img src="{% static 'tip/download.png'%}" width="30" height="30" alt="" loading="lazy">
+                    </a>
+                    直接无限速下载到本地
+                </h6>
             </div>
         </div>
 
         <div class="separator"></div>
         <div class="row">
             <div class="col-10 text-warp">
-                <h6 class="text-break">下载链接: <a href="{{ resource.location}}">{{ resource.location}}</a>
+                <h6 class="text-break">百度网盘: <a href="{{ resource.location}}">{{ resource.location}}</a>
                     密码: <kbd>{{ resource.key}}</kbd>
                 </h6>
             </div>
