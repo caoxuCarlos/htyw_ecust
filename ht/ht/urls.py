@@ -25,6 +25,7 @@ urlpatterns = [
     # hijack homepage url to answers page (prevent unauthorized bad information)
     # path('homepage/', answers_view.ResourceListView.as_view(), name='home'),
     path('tip/', include('tip.urls')),
+    path('airyslide/', include('airyslide.urls')),
     path('answers/', answers_view.ResourceListView.as_view(), name='answers'),
     path('contribute/', main_page_view.contribute, name='contribute'),
     path('search/', main_page_view.search_function, name='search'),

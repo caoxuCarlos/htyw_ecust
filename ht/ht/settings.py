@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'money_job.apps.MoneyJobConfig',
     'tip.apps.TipConfig',
+    'airyslide.apps.AiryslideConfig',
 ]
 
 MIDDLEWARE = [

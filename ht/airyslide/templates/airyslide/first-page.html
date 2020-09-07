@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static%}
+  <title>Airy's</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'airyslide/style/first-page-style.css' %}">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="{% static 'airyslide/image/logo.png' %}">
+</head>
+<body>
+  <section id="narv-bar">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars" ></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{%url 'slide-first'%}">首页 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'slide-first'%}#services">服务</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'slide-first'%}#airy_works">案例</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              下单
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'service1' %}">PPT制作</a>
+              <a class="dropdown-item" href="{% url 'service2' %}">PPT美化</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'slide-first' %}#contact_airy">联系我们</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!--bannersection-->
+  <section id="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="promo-title">Airy's visual creative</h3>
+          <p>Airy's 视觉创意工作室</p>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'airyslide/image/first.png'%}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--services-->
+  <section id="services">
+    <div class="containner text-center">
+      <h2 class="title1">Airy's提供的服务</h2>
+      <div class="row text-center">
+        <div class="col-md-4 services">
+          <img src="{% static 'airyslide/image/icon1@100x.png' %}" class="service-img">
+          <h3>PPT制作</h3>
+          <p>全新定制你的专属PPT</p>
+          <a href="{% url 'service1' %}">
+            <button type="button" class="btn btn-primary">下单</button>
+          </a> 
+        </div>
+        <div class="col-md-4 services">
+          <img src="{% static 'airyslide/image/icon3@100x.png' %}" class="service-img">
+          <h3>PPT美化</h3>
+          <p>修改美化,重制版面</p>
+          <a href="{% url 'service2' %}">
+            <button type="button" class="btn btn-primary2">下单</button>
+          </a>
+        </div>
+        <div class="col-md-4 services">
+          <img src="{% static 'airyslide/image/icon2@100x.png' %}" class="service-img">
+          <h3>网页设计</h3>
+          <p>全栈网页设计</p>
+          <button type="button" class="btn btn-primary">即将上线</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--portfolio-->
+  <h2 class="title2" id="airy_works">作品案例</h2>
+  <div class="gallery">
+    <div class="col">
+      <h4>课件</h4>
+      <!-- <div class="caption"> -->
+      <!--   <button type="button">查看更多</button> -->
+      <!-- </div> -->
+      <img src="{% static 'airyslide/image/2.png' %}" >
+    </div>
+    <div class="col">
+      <h4>汇报</h4>
+      <!-- <div class="caption"> -->
+      <!--   <button type="button">查看更多</button> -->
+      <!-- </div> -->
+      <img src="{% static 'airyslide/image/5.png' %}" >
+    </div>
+    <div class="col">
+      <h4>答辩</h4>
+      <!-- <div class="caption"> -->
+      <!--   <button type="button">查看更多</button> -->
+      <!-- </div> -->
+      <img src="{% static 'airyslide/image/6.png' %}" >
+    </div>
+  </div>
+
+  <!--contact-->
+  <section id="contact">
+    
+   <div class="containnner text-center" id="contact_airy">
+     <h4>联系我们</h4>
+      <div class="row text-center">
+        <div class="col-md-5 infor">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+          </svg>
+          <h5>e-mail</h5>
+          <p>young@airyslide.cc</p>
+        </div>
+        <div class="col-md-5 infor">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-phone" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+            <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+          <h5>微信公众号</h5>
+          <p>扫码关注</p>
+          <img src="{% static 'airyslide/image/wechat.jpg' %}" class="code">
+        </div>
+      </div>
+   </div>
+  </section>
+
+</body>
+</html>

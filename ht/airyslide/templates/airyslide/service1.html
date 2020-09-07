@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'airyslide/style/service1-style.css' %}">
+    <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Airy's-服务流程</title>
+    <link rel="icon" type="image/png" href="{% static 'airyslide/image/logo.png' %}">
+</head>
+<body>
+    <!--narv-bar-->
+    <section id="narv-bar">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" ></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="{%url 'slide-first'%}">首页 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'slide-first'%}#services">服务</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'slide-first'%}#airy_works">案例</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  下单
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'service1' %}">PPT制作</a>
+                  <a class="dropdown-item" href="{% url 'service2' %}">PPT美化</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'slide-first' %}#contact_airy">联系我们</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      
+    <!--head-->
+    <section id="head">
+        <div class="title text-crentre">
+            <h1>Fresh</h1>
+            <h5>——PPT制作服务流程——</h5>
+        </div>
+        <div class="flow text-center">
+          <img src="{% static 'airyslide/image/flow1@100x.png' %}"  alt="">
+            <h4 class="caption">具体操作步骤如下——</h4>
+        </div>
+        <div class="step1 text-center">   
+            
+            <h3 class="caption2 text-center">① 填写【订单要求】</h3>  
+            <p>为了保证制作效果，请先填写表单【订单要求】。点击下方链接进入表单</p>
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+            </svg>
+            <a href="https://tqp8abr6kn.jiandaoyun.com/f/5f4356f4cd573c0006eeaf27">https://tqp8abr6kn.jiandaoyun.com/f/5f4356f4cd573c0006eeaf27</a>
+        </div>
+        <div class="step2 text-center">   
+            
+          <h3 class="caption2 text-center">② 发送材料</h3>  
+          <p>提交表单后，请通过电子邮件发送要制作的PPT内容至Airy's邮箱：
+            <br>(请以附件形式发送doc/pdf/ppt/txt文档)<br>
+          </p>
+          <p class="email">young@airyslide.cc</p>
+      </div>
+      <div class="step3 text-center">   
+         
+        <h3 class="caption2 text-center">③ 下单成功，支付定金</h3>  
+        <p>您的订单信息已送出！Airy's会在一天之内回复并通过邮件和您商议细节，请注意查收邮件。</p>
+        <p class="price">收费标准</p>
+          <table class="centre">
+            <tr>
+              <th>类型</th>
+              <th>价格</th>
+            </tr>
+            <tr>
+              <td>第一阶段：10页以内</td>
+              <td>2元/页</td>
+            </tr>
+            <tr>
+              <td>第二阶段：11~30页</td>
+              <td>1.8元/页</td>
+            </tr>
+            <tr>
+              <td>第三阶段：31~50页</td>
+              <td>1.5元/页</td>
+            </tr>
+            <tr>
+              <td>第四阶段：50页以上</td>
+              <td>1.2元/页</td>
+            </tr>
+          </table> 
+          
+        <p class="line">下单后，请预支付定金￥10，PPT制作完成后Airy's会和您商议最终价格。</p>
+        <p style="color:rgb(100, 141, 98);">付款时请备注【订单要求】内使用的邮箱地址</p>
+          
+        <img src="{% static 'airyslide/image/pay.png' %}" alt="">
+      </div>
+
+    </section>
+    <div class="logo text-center">
+      <img src="{% static 'airyslide/image/logo.png' %}" class="logo"> 
+      <p>————————美观即效率————————</p>
+    </div>
+    
+</body>
+</html>
